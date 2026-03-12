@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--this names the tab-->
+    <title>PawFect Match - Find Your Forever Friend</title>
+    <link rel="stylesheet" href="styles/homePage.css">
 </head>
 <body>
-    
+
+    <!-- ---- Navigation Bar ---- -->
+    <!-- this lets users jump between pages -->
+    <nav>
+        <ul>
+            <li><a href="homePage.html" class="active">Home</a></li>
+            <li><a href="petsProfile.html">Meet the Pets</a></li>
+            <li><a href="YourDog.html">Your Dog</a></li>
+            <li><a href="form.html">Adopt Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- ---- Header (matches form.html header style) ---- -->
+    <header>
+        <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+        <h1>PawFect Match</h1>
+    </header>
+
+    <!-- ---- Hero / Banner Section ---- -->
+    <!-- big welcome section at the top of the page -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Every Pet Deserves a Loving Home</h2>
+            <p class="hero-sub">Browse our adorable animals and find your perfect companion today.</p>
+            <!-- these buttons link to the key pages -->
+            <div class="hero-buttons">
+                <a href="petsProfile.html" class="btn-primary">Meet the Pets 🐾</a>
+                <a href="form.html" class="btn-secondary">Start Adoption</a>
+            </div>
+        </div>
+        <!-- hero image on the right side -->
+        <div class="hero-image">
+            <img src="images/dog.jpeg" alt="Happy dog waiting for adoption">
+        </div>
+    </section>
+
+    <!-- ---- About Us Section ---- -->
+    <main>
+        <h2>About PawFect Match</h2>
+
+        <!-- three info cards side by side -->
+        <div class="cards">
+
+            <div class="card">
+                <!-- emoji icons keep it fun and are easy to use -->
+                <div class="card-icon">🏠</div>
+                <h3>Our Mission</h3>
+                <p>
+                    PawFect Match connects loving families with animals in need.
+                    We believe every dog, cat, and critter deserves a safe,
+                    happy forever home — and we work hard to make those matches happen.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🐶</div>
+                <h3>How It Works</h3>
+                <p>
+                    Browse our available pets, read their profiles, and when you find
+                    your match, fill out our simple adoption form. Our team will reach
+                    out within 48 hours to set up a meet-and-greet!
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">❤️</div>
+                <h3>Why Adopt?</h3>
+                <p>
+                    Adopting a pet saves a life. Shelter animals are just as loving,
+                    loyal, and fun as any other pet. Plus, adoption fees help us
+                    care for the animals still waiting for their families.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- call-to-action banner at the bottom -->
+        <div class="cta-banner">
+            <p>Ready to find your furever friend?</p>
+            <a href="petsProfile.html" class="btn-primary">View Available Pets 🐾</a>
+        </div>
+
+    </main>
+
+    <!-- ---- Footer ---- -->
+    <footer>
+        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with ❤️ for animals everywhere</p>
+    </footer>
+
 </body>
 </html>
