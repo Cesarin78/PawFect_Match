@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    gap: 10 px;
+}
+
+.box {
+    border-style: solid;
+    width: 300px;
+    height: 300px;
+    background-color:whitesmoke;
+    margin : 10px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+     margin-top: 10 px;
+    border-radius: 5px;
+    flex-direction: column;
+     
+}
+.images {
+    display:flex;
+    align-items: center;
+    justify-content: left;
+   
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column ;
+    display: block;
+
+}
+.adopt.btn {
+    background-color:darkred;
+    color: white;
+    margin-top: 10 px;
+    border-radius: 5px;
+    display: block;
+}
+
+body{
+    background: linear-gradient(wheat, white);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
