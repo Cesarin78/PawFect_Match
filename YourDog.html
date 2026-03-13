@@ -3,68 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  Adopt a Dog  </title>
-<link rel= "stylesheet" href = "style.css" >
-   
+    <!--this names the tab-->
+    <title>PawFect Match - Adopt a Dog</title>
+    <link rel="stylesheet" href="styles/YourDog.css">
 </head>
-<h1 > <u>Dogs</u> </h1>
-<h4> Find your pet:  </h4>
+<body>
 
-</body style =  "background-color: grey ">
- <div class = "container">
-        <div class = "box"> <img src ="images/IMG_5946.jpg" height = "200" > <b> LOBITO</b> <br> Breed: German Shepard <br> Age: 3 months old </br>  
-         <button class = "adopt btn"> <b>Adopt me!</b> </button> 
-      
-      
-        
-    </div>
+    <!-- ---- Header (matches the rest of the site) ---- -->
+    <header>
+        <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+        <h1>PawFect Match</h1>
+    </header>
 
-        <div class = "box"><img src ="images/IMG_5085.jpg" height = "200"  > <b> KIARA </b>  <br> Breed: Pitbull <br> Age: 6 months old <button class = "adopt btn"> <b>Adopt me!</b> </button> </div>
-        <div class = "box"><img src ="images/IMG_6186.jpg" height = "200" > <b>SIA </b> <br>Breed: Pitbull <br> Age: 2 weeks old <button class = "adopt btn"> <b>Adopt me!</b> </button> </br></div>
-        <div class = "box" ><img src ="images/IMG_1954.jpg" height = "200" ><b>OSITO </b></br>Breed: Great pyrenees <br>Age: 4 years old <br><button class = "adopt btn"> <b>Adopt me!</b> </button> </div>
-    
-    </div>
+    <!-- ---- Navigation Bar (sits below the logo/header) ---- -->
+    <!-- pages that aren't built yet use # as a placeholder href -->
+    <nav>
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="Find_Your_Pet.html">Find Your Pet</a></li>
+            <li><a href="form.html">Adoption Form</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <div class = "container">
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br> </div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box" >Name: <br>Breed: <br>Age: <br></div>
-    </div>
+    <!-- ---- Page Title ---- -->
+    <h2>🐶 Dogs Available for Adoption</h2>
+    <p class="subtitle">Find your loyal companion — every pup below is looking for their forever home.</p>
 
-  <div class = "container">
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br> </div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box" >Name: <br>Breed: <br>Age: <br></div>
-    </div>
+    <!-- ---- Dog Cards Grid ---- -->
+    <!-- each box is one dog card -->
+    <main>
+        <div class="dog-grid">
 
-      <div class = "container">
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br> </div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box" >Name: <br>Breed: <br>Age: <br></div>
-    </div>
-        <div class = "container">
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br> </div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box" >Name: <br>Breed: <br>Age: <br></div>
-    </div>
-         <div class = "container">
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br> </div>
-        <div class = "box">Name: <br>Breed: <br>Age: <br></div>
-        <div class = "box" >Name: <br>Breed: <br>Age: <br></div>
-    </div>
+            <!-- Row 1 — real photos from your images folder -->
+            <div class="dog-card">
+                <img src="images/IMG_5946.jpg" alt="Lobito">
+                <div class="dog-info">
+                    <h3>LOBITO</h3>
+                    <p><b>Breed:</b> German Shepherd</p>
+                    <p><b>Age:</b> 3 months old</p>
+                    <p class="dog-desc">Playful and full of energy, Lobito loves cuddles and learning new tricks.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
+            <div class="dog-card">
+                <img src="images/IMG_5085.jpg" alt="Kiara">
+                <div class="dog-info">
+                    <h3>KIARA</h3>
+                    <p><b>Breed:</b> Pitbull</p>
+                    <p><b>Age:</b> 6 months old</p>
+                    <p class="dog-desc">Sweet and gentle, Kiara gets along great with kids and loves belly rubs.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
- 
+            <div class="dog-card">
+                <!-- note: original file uses .JPG uppercase — keep it exact to avoid broken image -->
+                <img src="images/IMG_6186.JPG" alt="Sia">
+                <div class="dog-info">
+                    <h3>SIA</h3>
+                    <p><b>Breed:</b> Pitbull</p>
+                    <p><b>Age:</b> 2 weeks old</p>
+                    <p class="dog-desc">Tiny but mighty! Sia needs a patient family to help her grow into her paws.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
+            <div class="dog-card">
+                <img src="images/IMG_1954.jpg" alt="Osito">
+                <div class="dog-info">
+                    <h3>OSITO</h3>
+                    <p><b>Breed:</b> Great Pyrenees</p>
+                    <p><b>Age:</b> 4 years old</p>
+                    <p class="dog-desc">A gentle giant who loves the outdoors and being by your side all day long.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
+            <!-- Row 2 — using dog.jpeg and dog2.jpeg for remaining cards -->
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Bruno">
+                <div class="dog-info">
+                    <h3>BRUNO</h3>
+                    <p><b>Breed:</b> Labrador Retriever</p>
+                    <p><b>Age:</b> 1 year old</p>
+                    <p class="dog-desc">Energetic and smart, Bruno is fully vaccinated and ready for his new family.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Luna">
+                <div class="dog-info">
+                    <h3>LUNA</h3>
+                    <p><b>Breed:</b> Husky Mix</p>
+                    <p><b>Age:</b> 2 years old</p>
+                    <p class="dog-desc">Luna loves the snow, long walks, and howling along to your favorite songs.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Max">
+                <div class="dog-info">
+                    <h3>MAX</h3>
+                    <p><b>Breed:</b> Golden Retriever</p>
+                    <p><b>Age:</b> 3 years old</p>
+                    <p class="dog-desc">Max is a social butterfly who gets along with every person and pet he meets.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
-</body >
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Bella">
+                <div class="dog-info">
+                    <h3>BELLA</h3>
+                    <p><b>Breed:</b> Border Collie</p>
+                    <p><b>Age:</b> 18 months old</p>
+                    <p class="dog-desc">Intelligent and athletic, Bella thrives with an active owner who loves the outdoors.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
 
+            <!-- Row 3 -->
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Rocky">
+                <div class="dog-info">
+                    <h3>ROCKY</h3>
+                    <p><b>Breed:</b> Boxer</p>
+                    <p><b>Age:</b> 5 years old</p>
+                    <p class="dog-desc">Rocky is calm, loyal, and house-trained — the perfect relaxed companion.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Coco">
+                <div class="dog-info">
+                    <h3>COCO</h3>
+                    <p><b>Breed:</b> Dachshund</p>
+                    <p><b>Age:</b> 4 years old</p>
+                    <p class="dog-desc">Coco is a lap dog at heart — she loves movie nights and snuggling under blankets.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Zeus">
+                <div class="dog-info">
+                    <h3>ZEUS</h3>
+                    <p><b>Breed:</b> Rottweiler</p>
+                    <p><b>Age:</b> 2 years old</p>
+                    <p class="dog-desc">Zeus is protective, well-trained, and bonds deeply with his family.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Daisy">
+                <div class="dog-info">
+                    <h3>DAISY</h3>
+                    <p><b>Breed:</b> Beagle</p>
+                    <p><b>Age:</b> 7 months old</p>
+                    <p class="dog-desc">Daisy follows her nose everywhere and loves exploring the backyard with you.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Charlie">
+                <div class="dog-info">
+                    <h3>CHARLIE</h3>
+                    <p><b>Breed:</b> Poodle Mix</p>
+                    <p><b>Age:</b> 1 year old</p>
+                    <p class="dog-desc">Hypoallergenic and friendly, Charlie is great for families with allergies.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Mia">
+                <div class="dog-info">
+                    <h3>MIA</h3>
+                    <p><b>Breed:</b> Shih Tzu</p>
+                    <p><b>Age:</b> 3 years old</p>
+                    <p class="dog-desc">Mia is a tiny sweetheart who loves being pampered and carried everywhere.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Duke">
+                <div class="dog-info">
+                    <h3>DUKE</h3>
+                    <p><b>Breed:</b> Australian Shepherd</p>
+                    <p><b>Age:</b> 2 years old</p>
+                    <p class="dog-desc">Duke is a herding dog with boundless energy — perfect for active families.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Nala">
+                <div class="dog-info">
+                    <h3>NALA</h3>
+                    <p><b>Breed:</b> Siberian Husky</p>
+                    <p><b>Age:</b> 1 year old</p>
+                    <p class="dog-desc">Nala has the most striking blue eyes and a playful personality to match.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Buster">
+                <div class="dog-info">
+                    <h3>BUSTER</h3>
+                    <p><b>Breed:</b> Corgi</p>
+                    <p><b>Age:</b> 8 months old</p>
+                    <p class="dog-desc">Buster has tiny legs and a huge personality — he will keep you laughing all day.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Rosie">
+                <div class="dog-info">
+                    <h3>ROSIE</h3>
+                    <p><b>Breed:</b> Cocker Spaniel</p>
+                    <p><b>Age:</b> 5 years old</p>
+                    <p class="dog-desc">Rosie is a calm, affectionate girl who loves quiet evenings and morning walks.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Thor">
+                <div class="dog-info">
+                    <h3>THOR</h3>
+                    <p><b>Breed:</b> Doberman</p>
+                    <p><b>Age:</b> 3 years old</p>
+                    <p class="dog-desc">Loyal and intelligent, Thor is well-socialized and great with older children.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Penny">
+                <div class="dog-info">
+                    <h3>PENNY</h3>
+                    <p><b>Breed:</b> Jack Russell Terrier</p>
+                    <p><b>Age:</b> 2 years old</p>
+                    <p class="dog-desc">Penny is feisty, fun, and always ready for playtime — she never runs out of energy!</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Ace">
+                <div class="dog-info">
+                    <h3>ACE</h3>
+                    <p><b>Breed:</b> German Shepherd Mix</p>
+                    <p><b>Age:</b> 4 years old</p>
+                    <p class="dog-desc">Ace is a quick learner who knows basic commands and loves pleasing his owners.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Stella">
+                <div class="dog-info">
+                    <h3>STELLA</h3>
+                    <p><b>Breed:</b> French Bulldog</p>
+                    <p><b>Age:</b> 2 years old</p>
+                    <p class="dog-desc">Stella is low-energy, loves naps, and is perfect for apartment living.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog.jpeg" alt="Bear">
+                <div class="dog-info">
+                    <h3>BEAR</h3>
+                    <p><b>Breed:</b> Bernese Mountain Dog</p>
+                    <p><b>Age:</b> 1 year old</p>
+                    <p class="dog-desc">Bear is fluffy, calm, and absolutely adores children and other dogs.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+            <div class="dog-card">
+                <img src="images/dog2.jpeg" alt="Lola">
+                <div class="dog-info">
+                    <h3>LOLA</h3>
+                    <p><b>Breed:</b> Chihuahua Mix</p>
+                    <p><b>Age:</b> 6 years old</p>
+                    <p class="dog-desc">Don't let her size fool you — Lola has a huge heart and loves her people fiercely.</p>
+                    <a href="form.html" class="adopt-btn">Adopt Me! 🐾</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ---- Footer ---- -->
+    <footer>
+        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with ❤️ for animals everywhere</p>
+    </footer>
+
+</body>
 </html>
