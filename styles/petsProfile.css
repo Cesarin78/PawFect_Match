@@ -3,10 +3,20 @@
 /*example here we used artical in html. everything inside html will be called and placed into whatever it is youre doing*/
 /*here i made it to where picture will be on the left side and the information is on the right side*/
 /* Main card layout */
+body {
+    width: 65%;
+    margin: 80px auto;
+    border: 1px solid black ;
+    border-radius: 25px;
+    padding: 15px 1.5em;
+    box-shadow: 5px 5px 0 0;
+    background-image:linear-gradient(to right, #75d2f7, white) ;
+}
 .pet-card {
     display: flex;
     gap: 40px;
     align-items: flex-start;
+    background-color: blue;
 }
 
 /* LEFT SIDE */
