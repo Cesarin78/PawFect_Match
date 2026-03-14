@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--this names the tab-->
+    <title>PawFect Match - Find Your Pet</title>
+    <link rel="stylesheet" href="styles/Find_Your_Pet.css">
+</head>
+<body>
+
+    <!-- ---- Header (this should match the rest of the site) ---- -->
+    <header>
+        <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+        <h1>PawFect Match</h1>
+    </header>
+
+    <!-- ---- Navigation Bar (sits below the logo/header) ---- -->
+    <!-- pages that aren't built yet use # as a placeholder href -->
+    <nav>
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="Find_Your_Pet.html" class="active">Find Your Pet</a></li>
+            <li><a href="form.html">Adoption Form</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- ---- page title ---- -->
+    <h2>Find Your Perfect Pet</h2>
+    <p class="subtitle">What kind of companion are you looking for?</p>
+
+    <!-- ---- Category Cards that show different animal types ---- -->
+    <!-- each card is a clickable link to browse the specific animal types -->
+    <main>
+        <div class="category-grid">
+
+            <!-- Dogs card -->
+            <a href="YourDog.html" class="category-card">
+                <div class="card-emoji">🐶</div>
+                <h3>Dogs</h3>
+                <p>Loyal, energetic, and always happy to see you.</p>
+                <span class="card-btn">Browse Dogs</span>
+            </a>
+
+            <!-- Cats card -->
+            <a href="petsProfile.html#cats" class="category-card">
+                <div class="card-emoji">🐱</div>
+                <h3>Cats</h3>
+                <p>Independent, loving, and full of personality.</p>
+                <span class="card-btn">Browse Cats</span>
+            </a>
+
+            <!-- Guinea Pigs card -->
+            <a href="petsProfile.html#guinea-pigs" class="category-card">
+                <div class="card-emoji">🐹</div>
+                <h3>Guinea Pigs</h3>
+                <p>Social, gentle, and great for all ages.</p>
+                <span class="card-btn">Browse Guinea Pigs</span>
+            </a>
+
+            <!-- Rabbits card -->
+            <a href="petsProfile.html#rabbits" class="category-card">
+                <div class="card-emoji">🐰</div>
+                <h3>Rabbits</h3>
+                <p>Soft, curious, and surprisingly playful.</p>
+                <span class="card-btn">Browse Rabbits</span>
+            </a>
+
+            <!-- Birds card -->
+            <a href="petsProfile.html#birds" class="category-card">
+                <div class="card-emoji">🐦</div>
+                <h3>Birds</h3>
+                <p>Bright, cheerful, and full of song.</p>
+                <span class="card-btn">Browse Birds</span>
+            </a>
+
+        </div>
+
+        <!-- bottom CTA nudging toward the adoption form -->
+        <div class="cta-banner">
+            <p>Found the one? Take the next step! 🐾</p>
+            <a href="form.html" class="btn-primary">Start Your Adoption</a>
+        </div>
+    </main>
+
+    <!-- ---- Footer ---- -->
+    <footer>
+        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with ❤️ for animals everywhere</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* ============================================================
+   Find_Your_Pet.css  —  PawFect Match Find Your Pet page
+   Matches the aesthetic from styles/form.css & styles/homePage.css
+   ============================================================ */
+
+/* ---- Base styles (same as the rest of the site) ---- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    /* same gradient used across the whole site */
+    background: linear-gradient(to top, orange, white);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* ---- Navigation Bar ---- */
+nav {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 4px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+/* highlight the current page */
+nav ul li a:hover,
+nav ul li a.active {
+    color: blue;
+    border-bottom-color: orange;
+}
+
+/* ---- Header (identical to form.css) ---- */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header img {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+/* ---- Page title & subtitle ---- */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 36px 0 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #555;
+    margin: 0 0 30px;
+}
+
+/* ---- Main wrapper ---- */
+main {
+    padding: 10px 16px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---- Category grid ---- */
+/* 3 columns on desktop, wraps to 2 then 1 on smaller screens */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* ---- Category card ---- */
+/* each card is a full anchor tag so the whole card is clickable */
+.category-card {
+    text-decoration: none;
+    color: #222;
+    background: white;
+    width: min(240px, 100%);
+    padding: 30px 20px 24px;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    /* smooth lift on hover */
+    transition: transform 0.18s, box-shadow 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* big emoji at the top of each card */
+.card-emoji {
+    font-size: 52px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.category-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: blue;
+}
+
+.category-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    font-weight: normal; /* override form.css p bold */
+}
+
+/* "Browse X" pill button inside each card */
+.card-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 9px 20px;
+    background: blue;
+    color: orange;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    /* inherits transition from .category-card */
+}
+
+.category-card:hover .card-btn {
+    background: orange;
+    color: blue;
+}
+
+/* ---- CTA Banner ---- */
+.cta-banner {
+    margin-top: 40px;
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.cta-banner p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 16px;
+}
+
+/* ---- Primary button (same as homePage.css) ---- */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: blue;
+    color: orange;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
