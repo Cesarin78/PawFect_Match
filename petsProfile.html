@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Profile</title>
-    <link rel="stylesheet" href="styles/petsProfile.css">
+<meta charset="UTF-8">
+<title>Product Page</title>
+
+<link rel="stylesheet" href="styles/petsProfile.css">
+
 </head>
+
 <body>
-    <article class="pet-card">
 
-    <!-- LEFT SIDE: Images -->
+<div class="container">
+
+    <!-- LEFT SIDE IMAGE -->
     <div class="image-section">
-        <img id="mainImage" src="images/dog.jpeg" alt="petImage">
+        <img id="productImage" src="/images/dog.jpeg" alt="pets image">
 
-        <div class="thumbnails">
-            <img src="images/dog.jpeg" onclick="changeImage(this)">
-            <img src="images/dog2.jpeg" onclick="changeImage(this)">
-            <img src="images/dog3.jpeg" onclick="changeImage(this)">
+        <div class="buttons">
+            <button onclick="prevImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
         </div>
     </div>
 
-    <!-- RIGHT SIDE Description-->
-    <div class="pet-info">
-        <h1>Description</h1>
+    <!-- RIGHT SIDE DESCRIPTION -->
+    <div class="description">
+
+        <h2>Product Features</h2>
+
         <ul>
-            <li>Name</li>
-            <li>Gender</li>
-            <li>Age</li>
-            <li>Breed</li>
-            <li>Weight</li>
-            <li>Trained</li>
-            <li>Inside/Outside Pet</li>
-            <li>Friendly/Not Friendly</li>
-            <li>Energetic/Lazy</li>
-            <li>Up-to-date Vaccinations</li>
-            <li>Medical Conditions/Special Diets</li>
-            <li>Past History</li>
+            <li>High quality materials</li>
+            <li>Modern design</li>
+            <li>Durable and reliable</li>
+            <li>Easy installation</li>
+            <li>Affordable price</li>
         </ul>
 
-        <button class="adopt-button">Adopt Me</button>
     </div>
-</article>
-<script src="scripts/petsProfile.js"></script>
+
+</div>
+
+<script src="/scripts/petsProfile.js"></script>
+
 </body>
 </html>

@@ -1,67 +1,47 @@
-/*here we start our css. notice that we didnot need any prior or pre-set code*/
-/*here the way to call html things is by calling the parent methode that you used*/
-/*example here we used artical in html. everything inside html will be called and placed into whatever it is youre doing*/
-/*here i made it to where picture will be on the left side and the information is on the right side*/
-/* Main card layout */
-body {
-    width: 65%;
-    margin: 80px auto;
-    border: 1px solid black ;
-    border-radius: 25px;
-    padding: 15px 1.5em;
-    box-shadow: 5px 5px 0 0;
-    background-image:linear-gradient(to right, #75d2f7, white) ;
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
-.pet-card {
+
+/* Page layout */
+.container{
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    background-color: blue;
+    padding: 40px;
 }
 
-/* LEFT SIDE */
-.image-section {
-    width: 400px;
+/* Image section */
+.image-section{
+    width: 50%;
+    text-align: center;
 }
 
-#mainImage {
-    width: 100%;
-    border-radius: 12px;
+.image-section img{
+    width: 90%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.thumbnails {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+/* Buttons */
+.buttons{
+    margin-top: 15px;
 }
 
-.thumbnails img {
-    width: 80px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-}
-
-.thumbnails img:hover {
-    transform: scale(1.1);
-}
-
-/* RIGHT SIDE */
-.pet-info {
-    flex: 1;
-}
-
-.adopt-button {
-    margin-top: 20px;
-    padding: 12px 20px;
+button{
+    padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
+    margin: 5px;
     cursor: pointer;
 }
 
-.adopt-button:hover {
-    background-color: #45a049;
+/* Description section */
+.description{
+    width: 50%;
+    padding: 20px;
+}
+
+.description ul{
+    font-size: 18px;
+    line-height: 1.8;
 }
