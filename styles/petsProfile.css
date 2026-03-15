@@ -41,7 +41,8 @@ header {
     border-bottom: 1px solid #ddd;
 
     max-width: 1000px;   /* prevents stretching on big screens */
-    margin: 0 auto;      /* centers the header */
+    margin-left: 0 auto;      /* centers the header */
+    margin-right: auto;
 }
 
 header img {
