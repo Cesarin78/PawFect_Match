@@ -1,0 +1,283 @@
+/* ============================================================
+   Contact_Us.css  --  PawFect Match Contact page
+   Matches the aesthetic from form.css, homePage.css, YourDog.css
+   ============================================================ */
+
+/* ---- Base styles (same across all pages) ---- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(to top, orange, white);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* ---- Header (identical to form.css) ---- */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header img {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+/* ---- Navigation Bar ---- */
+nav {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 4px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: blue;
+    border-bottom-color: orange;
+}
+
+/* ---- Page title and subtitle ---- */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 36px 0 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #555;
+    margin: 0 0 30px;
+    padding: 0 16px;
+}
+
+/* ---- Main wrapper ---- */
+main {
+    padding: 10px 24px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---- Two-column layout: info cards on left, form on right ---- */
+.contact-layout {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap; /* stacks on small screens */
+    align-items: flex-start;
+}
+
+/* ---- Left column: info cards ---- */
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    min-width: 260px;
+}
+
+/* each contact info block (location, phone, email, social) */
+.info-card {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 32px;
+    line-height: 1;
+    /* keeps icon from shrinking when text is long */
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: blue;
+}
+
+.info-text p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* lighter color for the open/close hours note */
+.hours-note {
+    color: #777 !important;
+    font-size: 13px !important;
+}
+
+/* ---- Right column: contact form ---- */
+.form-column {
+    flex: 1.4;
+    min-width: 300px;
+}
+
+/* the white card that wraps the form */
+.contact-form-card {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 28px;
+}
+
+.contact-form-card h3 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+}
+
+/* ---- Form fields ---- */
+/* wraps each label + input pair so they stack vertically */
+.field-group {
+    margin-bottom: 16px;
+}
+
+.field-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* text, email, tel inputs match form.css style */
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group input[type="tel"],
+.field-group select,
+.field-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    color: #222;
+}
+
+/* blue glow on focus -- matches form.css */
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus {
+    border-color: #6a9cff;
+    box-shadow: 0 0 0 3px rgba(106, 156, 255, 0.25);
+}
+
+/* textarea should not be resized horizontally */
+.field-group textarea {
+    resize: vertical;
+}
+
+/* ---- Submit button (same blue/orange as form.css) ---- */
+input[type="submit"] {
+    margin-top: 8px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: blue;
+    color: orange;
+    transition: opacity 0.2s;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+/* ---- Shelter Hours Banner ---- */
+/* sits below both columns as a full-width card */
+.hours-banner {
+    margin-top: 30px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 24px 28px;
+    text-align: center;
+}
+
+.hours-banner h3 {
+    margin: 0 0 18px;
+    font-size: 20px;
+    color: blue;
+}
+
+/* four hour blocks in a row */
+.hours-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.hours-item {
+    min-width: 140px;
+}
+
+.hours-item p {
+    margin: 2px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
