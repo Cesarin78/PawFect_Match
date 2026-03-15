@@ -73,8 +73,7 @@ const dogs = {
         gender: "Female",
         price: "$650",
         desc: "Intelligent and athletic, Bella thrives with an active owner who loves the outdoors."
-    }
-    // Add more dogs here following the same structure
+    },
 };
 
 // ------------------ Get Dog Key from URL ------------------
