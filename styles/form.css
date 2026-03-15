@@ -250,6 +250,9 @@ input[type="submit"] {
     background: blue;
     color: orange;
 }
+input[type="submit"]:hover {
+    background: darkblue;      /* darker color */
+}
 
 footer {
     text-align: center;
