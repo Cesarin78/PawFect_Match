@@ -39,10 +39,6 @@ header {
     padding: 16px 20px;
     background: white;
     border-bottom: 1px solid #ddd;
-
-    max-width: 1000px;   /* prevents stretching on big screens */
-    margin-left: 0 auto;      /* centers the header */
-    margin-right: auto;
 }
 
 header img {
@@ -112,22 +108,34 @@ button{
     margin: 5px;
     cursor: pointer;
 }
-
+.buttons {
+    text-align: center;      /* centers inline-block children */
+    align-items: center;
+    padding-left: 40%;
+}
 
 
 .description ul{
     font-size: 18px;
     line-height: 1.8;
 }
-.adoptbutton{
-    text-align: center;
+
+
+.adoptbutton {
+    display: inline-block;   /* only as wide as specified width */
     width: 200px;
     height: 50px;
+    line-height: 50px;      /* centers text vertically */
     border: 2px solid black;
-    padding: 10px;
     background-color: orange;
-    margin: auto;
+    padding: 0;              /* no extra padding affecting hitbox */
+    text-align: center;      /* centers text inside button */
+    cursor: pointer;
+    position: relative;
+    z-index: 10;            /* ensures it's on top if needed */
+    box-sizing: border-box;  /* includes border in width/height */
 }
+
 footer {
     text-align: center;
     padding: 20px;
