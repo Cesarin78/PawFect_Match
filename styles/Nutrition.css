@@ -89,3 +89,40 @@ footer {
     font-size: 14px;
     color: #555;
 }
+
+/* Submenu options*/
+nav ul li {
+    position: relative;
+}
+
+/* hide submenu initially */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+/* submenu links */
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: none;
+}
+
+/* show dropdown on hover */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* hover effect */
+.submenu li a:hover {
+    background: #f2f2f2;
+}
