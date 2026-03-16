@@ -127,7 +127,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "Playful and full of energy, Allen loves cuddles and learning new tricks."
 
         },
         karl: {
@@ -137,7 +137,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "Playful and full of energy, this bunny lives for adventure."
         },
         snowball: {
             images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
@@ -146,7 +146,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "This rabbit is soft, calm and sweet, perfect for a patient adopter or a home with older children."
 
         },
         daisy: {
@@ -156,7 +156,7 @@ const pets = {
             size: "Medium",
             gender: "Male",
             price: "$500",
-            desc: "Playful and full of energy, Lobito loves cuddles and learning new tricks."
+            desc: "Daisy is a true companion, while follow you around everywhere you go."
 
         },
     
