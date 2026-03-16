@@ -117,6 +117,7 @@ img { max-width: 100%; }
   color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
   font-size: 16px;
 }
 
@@ -133,6 +134,7 @@ img { max-width: 100%; }
   color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
   margin: 4px 0;
 }
 
