@@ -82,3 +82,10 @@ body {
     color: #222;
     min-height: 100vh;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
