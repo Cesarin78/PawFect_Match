@@ -89,7 +89,7 @@
                               <ul class="sub">
                                  <li><button onclick="showText('Paragraph for Option 3A.')">LARGE BIRDS</button></li>
                                  <li><button onclick="showText('Paragraph for Option 3B.')">MEDIUM BIRDS</button></li>
-                                 <li><button onclick="showText('Paragraph for Option 3C.')">SMALL BIRDS</button></li>
+                                 <li><button onclick="showText('Paragraph for Option 3C.','images/dog.jpeg')">SMALL BIRDS</button></li>
                             </ul>
                         </details>
                      </li>
@@ -104,6 +104,7 @@
         <script>
             function showText(text) {
                const box = document.getElementById("display");
+               document.getElementById("display").innerHTML = `<p>${text}</p>`;
                box.style.display = "inline-block";
                box.innerHTML = `
                     <p>${text}</p>
