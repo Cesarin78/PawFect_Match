@@ -78,10 +78,62 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     /* same gradient as the rest of the site */
-    background: linear-gradient(to top, orange, white);
+    background: linear-gradient(to top, rgb(255, 165, 0), white);
     color: #222;
     min-height: 100vh;
 }
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  width: 250px;
+}
+
+.right {
+  flex: 1;
+  padding: 15px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 10px;
+  background: #4a6cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sub {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.sub button {
+  width: 100%;
+  padding: 8px;
+  background: #6f86ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+  
 
 footer {
     text-align: center;

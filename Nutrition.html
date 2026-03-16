@@ -19,11 +19,11 @@
             <li>
                 <a href="Find_Your_Pet.html" class = "active">Find Your Pet</a>
                 <ul class="submenu">
-                <li><a href="YourDog.html">Dogs</a></li>
-                <li><a href="YourCat.html">Cats</a></li>
-                <li><a href="YourPig.html">Guinea Pigs</a></li>
-                <li><a href="YourBunny.html">Rabbits</a></li>
-                <li><a href="YourBird.html">Birds</a></li>
+                  <li><a href="YourDog.html">Dogs</a></li>
+                  <li><a href="YourCat.html">Cats</a></li>
+                  <li><a href="YourPig.html">Guinea Pigs</a></li>
+                  <li><a href="YourBunny.html">Rabbits</a></li>
+                  <li><a href="YourBird.html">Birds</a></li>
                 </ul>
             </li>
             <li><a href="form.html" class="active">Adoption Form</a></li>
@@ -88,19 +88,30 @@
       </details>
      </li>
 
-     <li>
-      <details>
-        <summary><button class="main-btn">Option 3</button></summary>
-        <ul class="sub">
-          <li><button>Sub 3A</button></li>
-          <li><button>Sub 3B</button></li>
-          <li><button>Sub 3C</button></li>
-        </ul>
-      </details>
-     </li>
+                    <li>
+                        <details>
+                              <summary><button class="main-btn">Guinea Pig</button></summary>
+                              <ul class="sub">
+                                 <li><button onclick="showText('Paragraph for Option 3A.')">Large Guinea Pig</button></li>
+                                 <li><button onclick="showText('Paragraph for Option 3B.')">Medium Guinea Pig</button></li>
+                                 <li><button onclick="showText('Paragraph for Option 3C.')">Small Guinea Pig</button></li>
+                            </ul>
+                        </details>
+                     </li>
+                    </ul>
+            </div>
 
-  
-     </ul>
+             <div class="right" id="display">
+                 <p>Select an option to see information here.</p>
+            </div>
+        </div>
+
+        <script>
+            function showText(text) {
+                document.getElementById("display").innerHTML = `<p>${text}</p>`;
+            }
+        </script>
+
     </main>
 
      <footer>
