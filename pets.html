@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--this names the tab-->
+    <title>PawFect Match - Adopt a Dog</title>
+    <link rel="stylesheet" href="styles/pets.css">
+</head>
+<body>
+
+```
+<!-- ---- Header (matches the rest of the site) ---- -->
+<header>
+    <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+    <h1>PawFect Match</h1>
+</header>
+
+<!-- ---- Navigation Bar (sits below the logo/header) ---- -->
+<!-- pages that do not exist yet use # as a placeholder href -->
+<nav>
+    <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li>
+            <a href="Find_Your_Pet.html" class="active">Find Your Pet</a>
+            <ul class="submenu">
+                <li><a href="YourDog.html">Dogs</a></li>
+                <li><a href="YourCat.html">Cats</a></li>
+                <li><a href="YourPig.html">Guinea Pigs</a></li>
+                <li><a href="YourBunny.html">Rabbits</a></li>
+                <li><a href="YourBird.html">Birds</a></li>
+            </ul>
+        </li>
+        <li><a href="form.html">Adoption Form</a></li>
+        <li><a href="Nutrition.html">Nutrition</a></li>
+        <li><a href="homePage.html#bottom">About Us</a></li>
+        <li><a href="Contact_Us.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="filter">
+        <h3>Filtering</h3>
+
+        <h4>Type of Pet</h4>
+        <label><input type="radio" name="type" value="dog" onchange="filterPets()"> Dog</label>
+        <label><input type="radio" name="type" value="cat" onchange="filterPets()"> Cat</label>
+        <label><input type="radio" name="type" value="guineapig" onchange="filterPets()"> Guineapig</label>
+        <label><input type="radio" name="type" value="rabbit" onchange="filterPets()"> Rabbit</label>
+        <label><input type="radio" name="type" value="bird" onchange="filterPets()"> Bird</label>
+
+        <h4>Price</h4>
+        <label><input type="radio" name="price" value="100" onchange="filterPets()"> less than $100</label>
+        <label><input type="radio" name="price" value="200" onchange="filterPets()"> less than $200</label>
+        <label><input type="radio" name="price" value="300" onchange="filterPets()"> less than $300</label>
+        <label><input type="radio" name="price" value="400" onchange="filterPets()"> less than $400</label>
+
+
+        <h4>Size</h4>
+        <label><input type="radio" name="size" value="small" onchange="filterPets()"> Small</label>
+        <label><input type="radio" name="size" value="medium" onchange="filterPets()"> Medium</label>
+        <label><input type="radio" name="size" value="large" onchange="filterPets()"> Large</label>
+
+        <h4>Gender</h4>
+        <label><input type="radio" name="gender" value="male" onchange="filterPets()"> Male</label>
+        <label><input type="radio" name="gender" value="female" onchange="filterPets()"> Female</label>
+    </div>
+
+<h2>Available Pets</h2>
+<div class="pet-grid"></div>
+
+<script src="scripts/pets.js"></script>
+</body>
+</html>

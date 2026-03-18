@@ -211,7 +211,7 @@ const pets = {
             desc: "A little shy at first, but with patience this bird becomes a sweet and loyal companion."
 
         },
-    },
+    }
 };
 
 // ------------------ Get type and key from URL ------------------
@@ -260,3 +260,46 @@ if (pet) {
     const imgElem = document.getElementById("productImage");
     if (imgElem) imgElem.style.display = "none";
 }
+
+// Render pet cards
+function renderPets(filteredPets) {
+    const container = document.querySelector('.dog-grid');
+    container.innerHTML = '';
+
+    filteredPets.forEach(pet => {
+        const card = document.createElement('div');
+        card.classList.add('dog-card');
+        card.innerHTML = `
+            <img src="${pet.img}" alt="${pet.name}">
+            <div class="dog-info">
+                <h3>${pet.name.toUpperCase()}</h3>
+                <p><b>Breed:</b> ${pet.breed}</p>
+                <p><b>Age:</b> ${pet.age}</p>
+                <p class="dog-desc">${pet.desc}</p>
+                <a href="petsProfile.html?type=${pet.type}&key=${pet.key}" class="adopt-btn">View Details</a>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// Filter function
+function filterPets() {
+    const type = document.querySelector('input[name="type"]:checked')?.value;
+    const price = document.querySelector('input[name="price"]:checked')?.value;
+    const size = document.querySelector('input[name="size"]:checked')?.value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value;
+
+    const filtered = pets.filter(pet => {
+        if (type && pet.type !== type) return false;
+        if (price && pet.price > parseFloat(price)) return false;
+        if (size && pet.size !== size) return false;
+        if (gender && pet.gender !== gender) return false;
+        return true;
+    });
+
+    renderPets(filtered);
+}
+
+// Initial render
+renderPets(pets);
