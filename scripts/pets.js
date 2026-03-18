@@ -7,7 +7,8 @@ const pets = [
         age: "3 months",
         size: "large",
         gender: "male",
-        img: "images/IMG_5946.jpg"
+        img: "images/IMG_5946.jpg",
+        key: "lobito"
     },
     {
         name: "Kiara",
@@ -16,7 +17,8 @@ const pets = [
         age: "6 months",
         size: "medium",
         gender: "female",
-        img: "images/IMG_5085.jpg"
+        img: "images/IMG_5085.jpg",
+        key: "kiara"
     },
     {
         name: "Sia",
@@ -25,7 +27,8 @@ const pets = [
         age: "2 weeks",
         size: "small",
         gender: "female",
-        img: "images/IMG_6186.JPG"
+        img: "images/IMG_6186.JPG",
+        key: "sia"
     },
     {
         name: "Max",
@@ -34,7 +37,8 @@ const pets = [
         age: "3 years",
         size: "medium",
         gender: "male",
-        img: "https://placedog.net/500/350?id=1"
+        img: "https://placedog.net/500/350?id=1",
+        key: "max"
     },
     {
         name: "Bella",
@@ -43,7 +47,8 @@ const pets = [
         age: "18 months",
         size: "large",
         gender: "female",
-        img: "https://placedog.net/500/350?id=5"
+        img: "https://placedog.net/500/350?id=5",
+        key: "bella-dog"
     },
     {
         name: "Bella",
@@ -52,9 +57,9 @@ const pets = [
         age: "18 months",
         size: "large",
         gender: "female",
-        img: "https://placedog.net/500/350?id=5"
-    },
-    // Add more pets here
+        img: "https://placedog.net/500/350?id=5",
+        key: "bella-cat"
+    }
 ];
 
 // Function to render pets into the grid
@@ -78,7 +83,9 @@ function renderPets(petArray) {
             <p><b>Age:</b> ${pet.age}</p>
             <p><b>Size:</b> ${pet.size}</p>
             <p><b>Gender:</b> ${pet.gender}</p>
+            <a href="petsProfile.html?type=${pet.type}&key=${pet.key}" class="adopt-btn">View Details</a>
         `;
+
         grid.appendChild(card);
     });
 }
@@ -95,6 +102,10 @@ function filterPets() {
 
     renderPets(filtered);
 }
+
+// Event listeners for filter inputs (example)
+const filters = document.querySelectorAll('input[name="type"], input[name="size"]');
+filters.forEach(input => input.addEventListener("change", filterPets));
 
 // Initial render (show all pets)
 renderPets(pets);
