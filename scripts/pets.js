@@ -48,7 +48,7 @@ const pets = [
         size: "small",
         gender: "female",
         img: "https://www.pawlicy.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Fub3bwfd53mwy%2F3e2qvEeDXw8LyeV6616BRn%2Fe05ec9671046d082bb1623c893482be5%2FOrange_cat_sleeping.png&w=1200&q=75",
-        key: "butter-cat"
+        key: "butter"
     },
     {
         name: "Kira",
@@ -58,7 +58,7 @@ const pets = [
         size: "small",
         gender: "female",
         img: "https://images.unsplash.com/photo-1602418013963-c1f017b3bb63?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVhdXRpZnVsJTIwY2F0fGVufDB8fDB8fHww",
-        key: "kira-cat"
+        key: "kira"
     },
     {
         name: "Susy",
@@ -68,7 +68,7 @@ const pets = [
         size: "small",
         gender: "female",
         img: "https://www.perfect-fit.co.uk/cdn-cgi/image/height=617,f=auto,quality=90/sites/g/files/fnmzdf6431/files/2024-10/selective-focus-closeup-shot-gray-furry-tabby-cat-sitting-wooden-chair_181624-8432_1686748977273.png",
-        key: "susy-cat"
+        key: "susy"
     },
     {
         name: "Ken",
@@ -78,7 +78,7 @@ const pets = [
         size: "medium",
         gender: "female",
         img: "https://www.perfect-fit.co.uk/cdn-cgi/image/height=617,f=auto,quality=90/sites/g/files/fnmzdf6431/files/2024-10/selective-focus-closeup-shot-gray-furry-tabby-cat-sitting-wooden-chair_181624-8432_1686748977273.png",
-        key: "ken-cat"
+        key: "ken"
     }
 ];
 
