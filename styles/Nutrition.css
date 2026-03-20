@@ -103,7 +103,7 @@ body {
 /*  background: #ffffff; */
   background: transparent;
   border-radius: 8px;
-  max-width: 1000px;
+  max-width: 700px;
   min-height: 200px;
   
 }
@@ -113,6 +113,25 @@ body {
     display: block;
     margin: 10px auto 0;
 }
+
+.info-row {
+   display: flex;
+   align-items: flex-start;
+   gap: 20px;      
+}
+
+.info-text {
+  font-weight: bold;
+  flex: 1;                /* text takes remaining space */
+}
+
+.info-img {
+  width: 250px;           /* adjust as needed */
+  height: auto;
+  border-radius: 8px;
+}
+
+
 
 .menu {
   list-style: none;
