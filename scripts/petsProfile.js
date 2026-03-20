@@ -98,7 +98,7 @@ const pets = {
             price: "$100",
             desc: "Adorable guinea pig that loves snacks, gentle pets, and lots of attention."
         },
-        tommyM: {
+        tommyMaguire: {
             images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr71PqmgUk6ew84xwlxt0VYpYUrkVBkfYiHg&s"],
             name: "TOMMY MAGUIRE",
             breed: "Satin guinea pig",
