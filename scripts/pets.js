@@ -37,7 +37,7 @@ const pets = [
         age: "3 years",
         size: "medium",
         gender: "male",
-        img: "https://placedog.net/500/350?id=1",
+        img: "images/dog.jpeg",
         key: "max"
     },
     {

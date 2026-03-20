@@ -37,7 +37,7 @@ const pets = {
             price: "$450",
             desc: "Kind and calm, Osito enjoys spending time near people he loves."
         },
-        bruno: {
+        max: {
             images: ["images/dog.jpeg"],
             name: "Bruno",
             breed: "Great Pyrenees",
