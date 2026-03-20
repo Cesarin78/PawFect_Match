@@ -92,11 +92,16 @@ body {
   width: 250px;
 }
 
+.right p {
+  font-weight: bold;
+}
+
 .right {
   flex: 1;
   
   padding: 15px;
-  background: #ffffff;
+/*  background: #ffffff; */
+  background: transparent;
   border-radius: 8px;
   max-width: 1000px;
   min-height: 200px;
@@ -129,6 +134,7 @@ body {
   list-style: none;
   padding-left: 20px;
   margin-top: 8px;
+  background: transparent;
 }
 
 .sub button {
