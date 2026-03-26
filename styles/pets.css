@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+/*this is for moving the filter to the side*/
+.filter {
+float: left;
+width: auto;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    /* same orange/white gradient used across the whole site */
+    background: linear-gradient(to top, orange, white);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* ---- Header (identical to form.css) ---- */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header img {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+/* ---- Navigation Bar ---- */
+nav {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 4px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: blue;
+    border-bottom-color: orange;
+}
+
+/* ---- Page title & subtitle ---- */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 36px 0 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #555;
+    margin: 0 0 30px;
+}
+/* ---- Main wrapper ---- */
+main {
+    padding: 10px 24px 50px;
+}
+
+/* ---- Filters ---- */
+.filter {
+    padding: 20px;
+    background-color: #f4f4f4;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.filter h3 {
+    margin-bottom: 10px;
+    color: #ff6b6b;
+}
+
+.filter h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.filter label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* ---- Pet Grid ---- */
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* ---- Pet Card ---- */
+.pet-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.pet-card img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.pet-card h3 {
+    color: #ff6b6b;
+    margin: 10px 0 5px;
+}
+
+.pet-card p {
+    font-size: 0.9rem;
+    margin: 5px 10px;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* ---- Adopt Me button ---- */
+/* matches the blue/orange submit button from form.css */
+.adopt-btn {
+    display: block;
+    margin-top: 14px;
+    padding: 10px;
+    background: blue;
+    color: orange;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.adopt-btn:hover {
+    opacity: 0.85;
+}
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/*this is eddy adding the submenu*/
+/* allow submenu positioning */
+nav ul li {
+    position: relative;
+}
+
+/* hide submenu initially */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+/* submenu links */
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: none;
+}
+
+/* show dropdown on hover */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* hover effect */
+.submenu li a:hover {
+    background: #f2f2f2;
+}
