@@ -251,24 +251,18 @@ function renderPets(petArray) {
     });
 }
 
-// Function to filter pets based on selected checkboxes (including price)
 function filterPets() {
-  // Get all checked checkboxes for each filter category
+  // Get checked checkboxes for type, gender, price, and age
   const typeFilters = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(el => el.value);
-  const sizeFilters = Array.from(document.querySelectorAll('input[name="size"]:checked')).map(el => el.value);
   const genderFilters = Array.from(document.querySelectorAll('input[name="gender"]:checked')).map(el => el.value);
   const priceFilters = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(el => el.value);
+  const ageFilters = Array.from(document.querySelectorAll('input[name="age"]:checked')).map(el => el.value);
 
     let filtered = pets;
 
   // Filter by type (if any checkboxes are checked)
   if (typeFilters.length > 0) {
     filtered = filtered.filter(p => typeFilters.includes(p.type));
-}
-
-  // Filter by size (if any checkboxes are checked)
-  if (sizeFilters.length > 0) {
-    filtered = filtered.filter(p => sizeFilters.includes(p.size));
 }
 
   // Filter by gender (if any checkboxes are checked)
@@ -281,39 +275,40 @@ function filterPets() {
     filtered = filtered.filter(p => {
       const price = parseInt(p.price);
       return priceFilters.some(range => {
-        // Split the range into min and max (e.g., "100-200" → [100, 200])
         const [min, max] = range.split('-').map(Number);
         return price >= min && price <= max;
       });
     });
   }
 
+  // Filter by age (exclusive ranges)
+  if (ageFilters.length > 0) {
+    filtered = filtered.filter(p => {
+      const age = parseInt(p.age);
+      return ageFilters.some(range => {
+        const [min, max] = range.split('-').map(Number);
+        return age >= min && age <= max;
+      });
+    });
+}
+
   renderPets(filtered);
 }
-// Event listeners for all checkboxes (including price)
+// Event listeners for all checkboxes
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach(input => input.addEventListener("change", filterPets));
 
-// ----------- NEW PART: auto-filter based on URL ----------- //
+// ----------- Auto-filter based on URL ----------- //
 const params = new URLSearchParams(window.location.search);
-
-// Handle multiple values for all filters (including price)
 const typeFromURL = params.getAll("type");
-const sizeFromURL = params.getAll("size");
 const genderFromURL = params.getAll("gender");
-const priceFromURL = params.getAll("price"); // Now supports multiple prices
+const priceFromURL = params.getAll("price");
+const ageFromURL = params.getAll("age");
 
 // Check checkboxes based on URL params
 if (typeFromURL.length > 0) {
   typeFromURL.forEach(value => {
     const checkbox = document.querySelector(`input[name="type"][value="${value}"]`);
-    if (checkbox) checkbox.checked = true;
-  });
-}
-
-if (sizeFromURL.length > 0) {
-  sizeFromURL.forEach(value => {
-    const checkbox = document.querySelector(`input[name="size"][value="${value}"]`);
     if (checkbox) checkbox.checked = true;
   });
 }
@@ -328,14 +323,20 @@ if (genderFromURL.length > 0) {
 if (priceFromURL.length > 0) {
   priceFromURL.forEach(range => {
     const checkbox = document.querySelector(`input[name="price"][value="${range}"]`);
+    if (checkbox) checkbox.checked = true;
+  });
+}
+
+if (ageFromURL.length > 0) {
+  ageFromURL.forEach(range => {
+    const checkbox = document.querySelector(`input[name="age"][value="${range}"]`);
   if (checkbox) checkbox.checked = true;
   });
 }
 
-// Filter pets automatically if any URL params exist
-if (typeFromURL.length > 0 || sizeFromURL.length > 0 || genderFromURL.length > 0 || priceFromURL.length > 0) {
+// Filter pets if URL params exist
+if (typeFromURL.length > 0 || genderFromURL.length > 0 || priceFromURL.length > 0 || ageFromURL.length > 0) {
     filterPets();
 } else {
-  // No filters in URL? Show all pets
     renderPets(pets);
 }
