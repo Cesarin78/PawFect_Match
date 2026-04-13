@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--this names the tab-->
+    <title>PawFect Match - Adopt a Dog</title>
+    <link rel="stylesheet" href="styles/pets.css">
+</head>
+<body>
+
+```
+<!-- ---- Header (matches the rest of the site) ---- -->
+<header>
+    <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
+    <h1>PawFect Match</h1>
+</header>
+
+<!-- ---- Navigation Bar (sits below the logo/header) ---- -->
+<!-- pages that do not exist yet use # as a placeholder href -->
+<nav>
+    <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li>
+            <a href="Find_Your_Pet.html" class="active">Find Your Pet</a>
+            <ul class="submenu">
+                <li><a href="pets.html?type=dog">Dogs</a></li>
+                    <li><a href="pets.html?type=cat">Cats</a></li>
+                    <li><a href="pets.html?type=guineapig">Guinea Pigs</a></li>
+                    <li><a href="pets.html?type=rabbit">Rabbits</a></li>
+                    <li><a href="pets.html?type=bird">Birds</a></li>
+            </ul>
+        </li>
+        <li><a href="form.html">Adoption Form</a></li>
+        <li><a href="Nutrition.html">Nutrition</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="Contact_Us.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="filter">
+        <h3>Filtering</h3>
+
+        <!-- Price Sorting Controls -->
+        <div class="sort-controls">
+          <h4>Sort by Price:</h4>
+          <label>
+            <input type="radio" name="sort" value="cheapest" onchange="filterPets()"> $ to $$$
+          </label>
+          <label>
+            <input type="radio" name="sort" value="expensive" onchange="filterPets()"> $$$ to $
+          </label>
+          <label>
+            <input type="radio" name="sort" value="none" onchange="filterPets()" checked> No Sorting
+          </label>
+        </div>
+
+        <h4>Type of Pet</h4>
+        <label><input type="checkbox" name="type" value="dog" onchange="filterPets()"> Dog</label>
+        <label><input type="checkbox" name="type" value="cat" onchange="filterPets()"> Cat</label>
+        <label><input type="checkbox" name="type" value="guineapig" onchange="filterPets()"> Guineapig</label>
+        <label><input type="checkbox" name="type" value="rabbit" onchange="filterPets()"> Rabbit</label>
+        <label><input type="checkbox" name="type" value="bird" onchange="filterPets()"> Bird</label>
+
+        <h4>Price</h4>
+        <!-- Price Filter (Checkboxes with Ranges) -->
+        <label><input type="checkbox" name="price" value="0-100" onchange="filterPets()"> $0–$100</label>
+        <label><input type="checkbox" name="price" value="100-200" onchange="filterPets()"> $100–$200</label>
+        <label><input type="checkbox" name="price" value="200-300" onchange="filterPets()"> $200–$300</label>
+        <label><input type="checkbox" name="price" value="300-400" onchange="filterPets()"> $300–$400</label>
+
+        <h4>Gender</h4>
+        <label><input type="checkbox" name="gender" value="male" onchange="filterPets()"> Male</label>
+        <label><input type="checkbox" name="gender" value="female" onchange="filterPets()"> Female</label>
+
+        <h4>Age</h4>
+        <!-- Age Filter (Checkboxes) -->
+        <label><input type="checkbox" name="age" value="0-1" onchange="filterPets()"> 0–1 years</label>
+        <label><input type="checkbox" name="age" value="2-3" onchange="filterPets()"> 2–3 years</label>
+        <label><input type="checkbox" name="age" value="4-5" onchange="filterPets()"> 4–5 years</label>
+    </div>
+
+<h2>Available Pets</h2>
+<div class="pet-grid"></div>
+
+
+<script src="scripts/pets.js"></script>
+</body>
+</html>

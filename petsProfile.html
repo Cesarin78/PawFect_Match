@@ -17,10 +17,19 @@
 <nav>
     <ul>
         <li><a href="homePage.html">Home</a></li>
-        <li><a href="Find_Your_Pet.html"class="active">Find Your Pet</a></li>
+        <li>
+            <a href="Find_Your_Pet.html" class="active">Find Your Pet</a>
+            <ul class="submenu">
+                <li><a href="pets.html?type=dog">Dogs</a></li>
+                    <li><a href="pets.html?type=cat">Cats</a></li>
+                    <li><a href="pets.html?type=guineapig">Guinea Pigs</a></li>
+                    <li><a href="pets.html?type=rabbit">Rabbits</a></li>
+                    <li><a href="pets.html?type=bird">Birds</a></li>
+            </ul>
+        </li>
         <li><a href="form.html">Adoption Form</a></li>
         <li><a href="Nutrition.html">Nutrition</a></li>
-        <li><a href="homePage.html#bottom">About Us</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
         <li><a href="Contact_Us.html">Contact Us</a></li>
     </ul>
 </nav>
@@ -29,7 +38,7 @@
 <div id="dog1" class="container">
     <!-- LEFT SIDE IMAGE -->
     <div class="image-section">
-        <img id="productImage" src="" alt="Dog image">
+        <img id="productImage" src="" alt="pet image">
         <div class="buttons">
             <button onclick="prevImage()">Previous</button>
             <button onclick="nextImage()">Next</button>

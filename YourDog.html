@@ -38,7 +38,33 @@
         <li><a href="Contact_Us.html">Contact Us</a></li>
     </ul>
 </nav>
+<!--here i will add the filtering-->
+    <div class="filter">
+        <h3>Filtering</h3>
 
+        <h4>Type of Pet</h4>
+        <label><input type="radio" name="type" value="dog" onchange="filterPets()"> Dog</label>
+        <label><input type="radio" name="type" value="cat" onchange="filterPets()"> Cat</label>
+        <label><input type="radio" name="type" value="guineapig" onchange="filterPets()"> Guineapig</label>
+        <label><input type="radio" name="type" value="rabbit" onchange="filterPets()"> Rabbit</label>
+        <label><input type="radio" name="type" value="bird" onchange="filterPets()"> Bird</label>
+
+        <h4>Price</h4>
+        <label><input type="radio" name="price" value="100" onchange="filterPets()"> less than $100</label>
+        <label><input type="radio" name="price" value="200" onchange="filterPets()"> less than $200</label>
+        <label><input type="radio" name="price" value="300" onchange="filterPets()"> less than $300</label>
+        <label><input type="radio" name="price" value="400" onchange="filterPets()"> less than $400</label>
+
+
+        <h4>Size</h4>
+        <label><input type="radio" name="size" value="small" onchange="filterPets()"> Small</label>
+        <label><input type="radio" name="size" value="medium" onchange="filterPets()"> Medium</label>
+        <label><input type="radio" name="size" value="large" onchange="filterPets()"> Large</label>
+
+        <h4>Gender</h4>
+        <label><input type="radio" name="gender" value="male" onchange="filterPets()"> Male</label>
+        <label><input type="radio" name="gender" value="female" onchange="filterPets()"> Female</label>
+    </div>
 <!-- ---- Page Title ---- -->
 <h2>Dogs Available for Adoption</h2>
 <p class="subtitle">Find your loyal companion. Every pup below is looking for their forever home.</p>
@@ -323,7 +349,7 @@
 
     </div>
 </main>
-
+<script src="/scripts/petsProfile.js"></script>
 <!-- ---- Footer ---- -->
 <footer>
     <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>

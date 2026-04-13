@@ -23,19 +23,18 @@
             <li>
                 <a href="Find_Your_Pet.html">Find Your Pet</a>
                 <ul class="submenu">
-                    <li><a href="YourDog.html">Dogs</a></li>
-                    <li><a href="YourCat.html">Cats</a></li>
-                    <li><a href="YourPig.html">Guinea Pigs</a></li>
-                    <li><a href="YourBunny.html">Rabbits</a></li>
-                    <li><a href="YourBird.html">Birds</a></li>
+                    <li><a href="pets.html?type=dog">Dogs</a></li>
+                    <li><a href="pets.html?type=cat">Cats</a></li>
+                    <li><a href="pets.html?type=guineapig">Guinea Pigs</a></li>
+                    <li><a href="pets.html?type=rabbit">Rabbits</a></li>
+                    <li><a href="pets.html?type=bird">Birds</a></li>
                 </ul>
             </li>
             <li><a href="form.html">Adoption Form</a></li>
-            <li><a href="homePage.html#bottom">About Us</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="Contact_Us.html">Contact Us</a></li>
         </ul>
     </nav>
-
     <!-- ---- Hero / Banner Section ---- -->
     <!-- the welcome section at the top of the page -->
     <section class="hero">
@@ -50,9 +49,16 @@
         </div>
         <!-- hero image on the right side -->
         <div class="hero-image">
-            <img src="images/dog.jpeg" alt="Happy dog waiting for adoption">
-        </div>
-    </section>
+    <div class="slideshow">
+        <img src="images/dog.jpeg" alt="Dog waiting for adoption" class="slide active">
+        <img src="images/cat.jpeg" alt="Cat waiting for adoption" class="slide">
+        <img src="images/rabbit.jpeg" alt="Rabbit waiting for adoption" class="slide">
+        <img src="images/bird.jpeg" alt="Bird waiting for adoption" class="slide">
+        <!-- Add or remove <img> lines to match your actual image files -->
+    </div>
+
+</div>
+</section>
 
     <!-- ---- About Us Section ---- -->
      <div id="bottom"></div>
@@ -106,9 +112,18 @@
     </main>
 
     <!-- ---- Footer ---- -->
+        const slides = document.querySelectorAll('.slideshow .slide');
+        let current = 0;
+
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
     <footer>
         <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with ❤️ for animals everywhere</p>
     </footer>
-
-</body>
-</html>
+    <script>
