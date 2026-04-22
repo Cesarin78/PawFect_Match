@@ -173,7 +173,12 @@ nav ul li:hover .submenu {
     background: #f2f2f2;
 }
 
-<<<<<<< HEAD
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
+}
+
 
 
 /* ---- CTA Banner ---- */
@@ -215,9 +220,3 @@ nav ul li:hover .submenu {
     opacity: 0.85;
 }
 
-=======
-.top-info {
-    margin-left: auto;
-    padding-right: 1%;
-}
->>>>>>> e580e2076475b8a1a9193cdb35f0e84d7a9c50a0

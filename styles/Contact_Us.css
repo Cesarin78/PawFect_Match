@@ -434,4 +434,5 @@ input:not(:placeholder-shown):valid {
 .top-info {
     margin-left: auto;
     padding-right: 1%;
+    text-align: center;
 }
