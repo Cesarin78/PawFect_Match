@@ -173,12 +173,6 @@ nav ul li:hover .submenu {
     background: #f2f2f2;
 }
 
-<<<<<<< HEAD
-/* ---- CTA Banner ---- */
-.cta-banner {
-    margin: 30px auto;
-    max-width: 600px;
-=======
 .top-info {
     margin-left: auto;
     padding-right: 1%;
@@ -192,36 +186,24 @@ nav ul li:hover .submenu {
     /* margin-top: 5px ; */
     max-width: 450px;
     width: 100%;
->>>>>>> e5b832cbc8c0e9b23b156349207bb323511ec6db
     background: white;
     padding: 28px;
     border-radius: 14px;
     border: 1px solid #e6e6e6;
-<<<<<<< HEAD
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-=======
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     text-align: center;
    z-index:  10 ;
    margin: -10px auto;
->>>>>>> e5b832cbc8c0e9b23b156349207bb323511ec6db
 }
 
 .cta-banner p {
     font-size: 20px;
     font-weight: bold;
-<<<<<<< HEAD
-    margin: 0 0 16px;
-}
-
-=======
     /* margin: 0 0 16px; */
         margin: 10px auto; 
 }
 
 /* ---- Primary button (same as homePage.css) ---- */
->>>>>>> e5b832cbc8c0e9b23b156349207bb323511ec6db
 .btn-primary {
     display: inline-block;
     padding: 12px 24px;
@@ -231,16 +213,6 @@ nav ul li:hover .submenu {
     border-radius: 12px;
     font-size: 16px;
     font-weight: bold;
-<<<<<<< HEAD
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: orange;
-    color: white;
-}
-=======
     transition: opacity 0.2s;
 }
 
@@ -248,4 +220,38 @@ nav ul li:hover .submenu {
     opacity: 0.85;
 }
 
->>>>>>> e5b832cbc8c0e9b23b156349207bb323511ec6db
+
+.cta-banner {
+    margin-top: 40px;
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.cta-banner p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 16px;
+}
+
+/* ---- Primary button (same as homePage.css) ---- */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: blue;
+    color: orange;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
