@@ -80,7 +80,7 @@ const pets = [
     {
         name: "Ken",
         type: "cat",
-        breed: "Husky",
+        breed: "Domestic shorthair",
         age: "4 years old",
         size: "medium",
         gender: "male",

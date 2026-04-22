@@ -2,7 +2,7 @@
 const pets = {
     dog: {
         lobito: {
-            images: ["images/IMG_5946.jpg", "images/dog1-2.jpg"],
+            images: ["images/IMG_5946.jpg", "images/IMG_2774.jpg"],
             name: "Lobito",
             breed: "German Shepherd",
             size: "Medium",

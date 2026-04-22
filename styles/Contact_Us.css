@@ -423,3 +423,10 @@ nav ul li:hover .submenu {
 .submenu li a:hover {
     background: #f2f2f2;
 }
+input:focus:invalid {
+  border: 2px solid red !important;
+  outline: none;
+}
+input:not(:placeholder-shown):valid {
+  border: 2px solid green;
+}

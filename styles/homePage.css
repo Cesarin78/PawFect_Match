@@ -304,3 +304,22 @@ nav ul li:hover .submenu {
 .submenu li a:hover {
     background: #f2f2f2;
 }
+
+.adoption_review{
+    text-align: center;
+    
+}
+.adoption_review h2 {
+    text-align: center;
+    background-color: skyblue;
+    padding: 10px;
+    
+}
+.review {
+    margin: 90px;
+}
+.review p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
