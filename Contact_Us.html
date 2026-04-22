@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--this names the tab-->
     <title>PawFect Match - Contact Us</title>
     <link rel="stylesheet" href="styles/Contact_Us.css">
 </head>
 <body>
 
-    <!-- ---- Header (matches the rest of the site) ---- -->
+    <!-- ---- Header ---- -->
     <header>
         <img src="images/adoptMe.jpeg" alt="PawFect Match logo">
         <h1>PawFect Match</h1>
     </header>
 
-    <!-- ---- Navigation Bar (sits below the logo/header) ---- -->
+    <!-- ---- Navigation Bar ---- -->
     <nav>
         <ul>
             <li><a href="homePage.html">Home</a></li>
@@ -35,14 +34,14 @@
         </ul>
     </nav>
 
-    <!-- ---- this  is the Page Title ---- -->
+    <!-- ---- Page Title ---- -->
     <h2>Contact Us</h2>
     <p class="subtitle">We would love to hear from you! Reach out with any questions about adoptions, volunteering, or our animals.</p>
 
     <main>
         <div class="contact-layout">
 
-            <!-- ---- On the left side: Contact Info Cards ---- -->
+            <!-- ---- LEFT SIDE: Contact Info Cards ---- -->
             <div class="info-column">
 
                 <div class="info-card">
@@ -83,23 +82,39 @@
                     </div>
                 </div>
 
-            </div>
+                <div class="info-card">
+                    <div class="info-icon">⭐</div>
+                    <div class="info-text">
+                        <h3>Rate Us</h3>
+                        <p>How was your experience?</p>
+                        <div class="star-rating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <p id="rating-feedback" class="rating-feedback">Click a star to rate!</p>
+                        <button onclick="submitRating()" class="rating-btn">Submit Rating</button>
+                        <p id="rating-success" class="rating-success" style="display:none;">Thanks for your rating! 🐾</p>
+                    </div>
+                </div>
 
-            <!-- ----on the right: Contact Form ---- -->
+            </div> <!-- closes info-column ✅ -->
+
+            <!-- ---- RIGHT SIDE: Contact Form ---- -->
             <div class="form-column">
                 <div class="contact-form-card">
                     <h3>Send Us a Message</h3>
 
-                    <!-- success message: hidden by default, shown by JS after submit -->
+                    <!-- success message hidden by default -->
                     <div id="success-message" class="success-box" style="display: none;">
                         <div class="success-icon">🐾</div>
                         <h3>Message Sent!</h3>
                         <p>Thanks for reaching out! We will get back to you within 1 to 2 business days.</p>
-                        <!-- lets the visitor go back and send another message -->
                         <button onclick="resetForm()" class="reset-btn">Send Another Message</button>
                     </div>
 
-                    <!-- the form, given an id so JS can hide and reset it -->
                     <form id="contact-form" onsubmit="handleSubmit(event)">
 
                         <div class="field-group">
@@ -137,9 +152,9 @@
 
                     </form>
                 </div>
-            </div>
+            </div> <!-- closes form-column ✅ -->
 
-        </div>
+        </div> <!-- closes contact-layout ✅ -->
 
         <!-- ---- Hours Banner ---- -->
         <div class="hours-banner">
@@ -168,28 +183,57 @@
 
     <!-- ---- Footer ---- -->
     <footer>
-        <p>© 2025 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
+        <p>© 2026 PawFect Match &nbsp;|&nbsp; Made with love for animals everywhere</p>
     </footer>
 
     <script>
-        // runs when the visitor clicks Send Message
+        // Send Message form
         function handleSubmit(event) {
-            // stops the page from reloading, which is the default form behavior
             event.preventDefault();
-
-            // hide the form and show the success message in its place
             document.getElementById('contact-form').style.display = 'none';
             document.getElementById('success-message').style.display = 'block';
         }
 
-        // runs when visitor clicks "Send Another Message"
         function resetForm() {
-            // wipe all the field values back to blank
             document.getElementById('contact-form').reset();
-
-            // swap the panels back: hide success, show form
             document.getElementById('success-message').style.display = 'none';
             document.getElementById('contact-form').style.display = 'block';
+        }
+
+        // Star Rating
+        let selectedRating = 0;
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const val = parseInt(star.getAttribute('data-value'));
+                stars.forEach(s => {
+                    s.classList.toggle('hovered', parseInt(s.getAttribute('data-value')) <= val);
+                });
+            });
+
+            star.addEventListener('mouseout', () => {
+                stars.forEach(s => s.classList.remove('hovered'));
+            });
+
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.getAttribute('data-value'));
+                stars.forEach(s => {
+                    s.classList.toggle('selected', parseInt(s.getAttribute('data-value')) <= selectedRating);
+                });
+                document.getElementById('rating-feedback').textContent = `You selected ${selectedRating} star${selectedRating > 1 ? 's' : ''}!`;
+            });
+        });
+
+        function submitRating() {
+            if (selectedRating === 0) {
+                alert('Please select a star rating first!');
+                return;
+            }
+            document.getElementById('rating-feedback').style.display = 'none';
+            document.querySelector('.rating-btn').style.display = 'none';
+            document.querySelector('.star-rating').style.display = 'none';
+            document.getElementById('rating-success').style.display = 'block';
         }
     </script>
 

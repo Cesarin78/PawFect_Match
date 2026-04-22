@@ -95,11 +95,12 @@ main {
 }
 
 /* ---- Two-column layout: info cards on left, form on right ---- */
+/* UPDATED: changed align-items to stretch so both columns match height */
 .contact-layout {
     display: flex;
     gap: 24px;
-    flex-wrap: wrap; /* stacks on small screens */
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch; /* ← UPDATED from flex-start */
 }
 
 /* ---- Left column: info cards ---- */
@@ -111,7 +112,7 @@ main {
     min-width: 260px;
 }
 
-/* each contact info block (location, phone, email, social) */
+/* each contact info block */
 .info-card {
     background: white;
     border-radius: 14px;
@@ -132,7 +133,6 @@ main {
 .info-icon {
     font-size: 32px;
     line-height: 1;
-    /* keeps icon from shrinking when text is long */
     flex-shrink: 0;
 }
 
@@ -148,25 +148,81 @@ main {
     color: #333;
 }
 
-/* lighter color for the open/close hours note */
 .hours-note {
     color: #777 !important;
     font-size: 13px !important;
 }
 
+/* ---- Star Rating ---- */
+/* ADDED: all star rating styles */
+.star-rating {
+    display: flex;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.star {
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.star.selected,
+.star.hovered {
+    color: orange;
+}
+
+.rating-feedback {
+    font-size: 13px;
+    color: #555;
+    margin: 4px 0;
+}
+
+.rating-btn {
+    padding: 8px 16px;
+    background: blue;
+    color: orange;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.rating-btn:hover {
+    background-color: orange;
+    color: white;
+}
+
+.rating-success {
+    color: green;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
 /* ---- Right column: contact form ---- */
+/* UPDATED: added display flex so form card can stretch */
 .form-column {
     flex: 1.4;
     min-width: 300px;
+    display: flex;            /* ← ADDED */
+    flex-direction: column;   /* ← ADDED */
 }
 
 /* the white card that wraps the form */
+/* UPDATED: added flex: 1 so it stretches to match info column height */
 .contact-form-card {
     background: white;
     border-radius: 14px;
     border: 1px solid #e6e6e6;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     padding: 28px;
+    flex: 1;                  /* ← ADDED */
+    display: flex;            /* ← ADDED */
+    flex-direction: column;   /* ← ADDED */
 }
 
 .contact-form-card h3 {
@@ -177,7 +233,6 @@ main {
 }
 
 /* ---- Form fields ---- */
-/* wraps each label + input pair so they stack vertically */
 .field-group {
     margin-bottom: 16px;
 }
@@ -190,7 +245,6 @@ main {
     color: #333;
 }
 
-/* text, email, tel inputs match form.css style */
 .field-group input[type="text"],
 .field-group input[type="email"],
 .field-group input[type="tel"],
@@ -206,7 +260,6 @@ main {
     color: #222;
 }
 
-/* blue glow on focus -- matches form.css */
 .field-group input:focus,
 .field-group select:focus,
 .field-group textarea:focus {
@@ -214,12 +267,14 @@ main {
     box-shadow: 0 0 0 3px rgba(106, 156, 255, 0.25);
 }
 
-/* textarea should not be resized horizontally */
+/* UPDATED: added flex: 1 so textarea expands to fill remaining space */
 .field-group textarea {
     resize: vertical;
+    flex: 1;                  /* ← ADDED */
+    min-height: 120px;        /* ← ADDED so it never gets too small */
 }
 
-/* ---- Submit button (same blue/orange as form.css) ---- */
+/* ---- Submit button ---- */
 input[type="submit"] {
     margin-top: 8px;
     width: 100%;
@@ -238,8 +293,15 @@ input[type="submit"]:hover {
     opacity: 0.85;
 }
 
+/* ---- Form itself stretches inside the card ---- */
+/* ADDED: makes the form fill the card vertically */
+#contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 /* ---- Shelter Hours Banner ---- */
-/* sits below both columns as a full-width card */
 .hours-banner {
     margin-top: 30px;
     background: white;
@@ -254,9 +316,10 @@ input[type="submit"]:hover {
     margin: 0 0 18px;
     font-size: 20px;
     color: blue;
+    border-bottom: 2px solid orange;  
+    padding-bottom: 12px;
 }
 
-/* four hour blocks in a row */
 .hours-grid {
     display: flex;
     justify-content: space-around;
@@ -283,7 +346,6 @@ footer {
 }
 
 /* ---- Success Message Box ---- */
-/* shown in place of the form after a successful submit */
 .success-box {
     text-align: center;
     padding: 30px 20px;
@@ -292,11 +354,9 @@ footer {
 .success-icon {
     font-size: 60px;
     margin-bottom: 12px;
-    /* gentle bounce animation to celebrate the send */
     animation: bounce 0.6s ease;
 }
 
-/* bounce keyframes: pops up then settles */
 @keyframes bounce {
     0%   { transform: scale(0.5); opacity: 0; }
     60%  { transform: scale(1.15); opacity: 1; }
@@ -315,7 +375,6 @@ footer {
     margin: 0 0 24px;
 }
 
-/* "Send Another Message" button matches the site's blue/orange style */
 .reset-btn {
     padding: 12px 28px;
     background: blue;
@@ -332,13 +391,11 @@ footer {
     opacity: 0.85;
 }
 
-/*this is eddy adding the submenu*/
-/* allow submenu positioning */
+/* ---- Submenu ---- */
 nav ul li {
     position: relative;
 }
 
-/* hide submenu initially */
 .submenu {
     display: none;
     position: absolute;
@@ -353,19 +410,16 @@ nav ul li {
     min-width: 160px;
 }
 
-/* submenu links */
 .submenu li a {
     display: block;
     padding: 10px 15px;
     border-bottom: none;
 }
 
-/* show dropdown on hover */
 nav ul li:hover .submenu {
     display: block;
 }
 
-/* hover effect */
 .submenu li a:hover {
     background: #f2f2f2;
 }
