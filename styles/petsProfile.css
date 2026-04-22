@@ -173,7 +173,51 @@ nav ul li:hover .submenu {
     background: #f2f2f2;
 }
 
+<<<<<<< HEAD
+
+
+/* ---- CTA Banner ---- */
+.cta-banner {
+    /* margin-top: 5px ; */
+    max-width: 450px;
+    width: 100%;
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+   z-index:  10 ;
+   margin: -10px auto;
+}
+
+.cta-banner p {
+    font-size: 20px;
+    font-weight: bold;
+    /* margin: 0 0 16px; */
+        margin: 10px auto; 
+}
+
+/* ---- Primary button (same as homePage.css) ---- */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: blue;
+    color: orange;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+=======
 .top-info {
     margin-left: auto;
     padding-right: 1%;
 }
+>>>>>>> e580e2076475b8a1a9193cdb35f0e84d7a9c50a0
