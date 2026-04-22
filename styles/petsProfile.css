@@ -127,29 +127,7 @@ button{
 }
 
 
-.adoptbutton {
-    display: block;   /* only as wide as specified width */
-    width: 200px;
-    height: 50px;
-    line-height: 50px;      /* centers text vertically */
-    border-radius: 12px;
-    background-color: blue;
-    color: darkorange;
-    padding: 0;
-    text-align: center;      /* centers text inside button */
-    cursor: pointer;
-    position: relative;
-    z-index: 10;            /* ensures it's on top if needed */
-    box-sizing: border-box;  /* includes border in width/height */
-    font-weight: bold;
-    font-size: 24px;
-    margin: 20px auto;   /* centers it */
-}
-.adoptbutton:hover {
-    background-color: darkblue;  /* change color when hovering */
-    transform: scale(1.05);        /* slightly grow the button */
-    transition: all 0.2s ease;     /* smooth animation */
-}
+
 
 footer {
     text-align: center;
@@ -194,3 +172,51 @@ nav ul li:hover .submenu {
 .submenu li a:hover {
     background: #f2f2f2;
 }
+
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
+}
+
+
+
+/* ---- CTA Banner ---- */
+.cta-banner {
+    /* margin-top: 5px ; */
+    max-width: 450px;
+    width: 100%;
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+   z-index:  10 ;
+   margin: -10px auto;
+}
+
+.cta-banner p {
+    font-size: 20px;
+    font-weight: bold;
+    /* margin: 0 0 16px; */
+        margin: 10px auto; 
+}
+
+/* ---- Primary button (same as homePage.css) ---- */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: blue;
+    color: orange;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+

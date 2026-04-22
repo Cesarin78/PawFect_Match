@@ -232,3 +232,9 @@ summary button {
   padding: 10px;
   cursor: pointer;
 }
+
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
+}

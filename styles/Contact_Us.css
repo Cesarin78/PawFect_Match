@@ -430,3 +430,9 @@ input:focus:invalid {
 input:not(:placeholder-shown):valid {
   border: 2px solid green;
 }
+
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
+}

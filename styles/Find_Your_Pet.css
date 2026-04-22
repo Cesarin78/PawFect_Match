@@ -250,3 +250,9 @@ nav ul li:hover .submenu {
 .submenu li a:hover {
     background: #f2f2f2;
 }
+
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
+}

@@ -174,7 +174,7 @@ h2 {
     color: white;              /* text turns white */
     opacity: 1;
 }
-}
+
 
 /* outline version for secondary action */
 .btn-secondary {
@@ -323,3 +323,8 @@ nav ul li:hover .submenu {
     font-size: 25px;
 }
 
+.top-info {
+    margin-left: auto;
+    padding-right: 1%;
+    text-align: center;
+}
