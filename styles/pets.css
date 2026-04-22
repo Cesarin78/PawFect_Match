@@ -144,7 +144,6 @@ main {
 .pet-card img {
     width: 250px;
     height: 180px;
-    object-fit: cover;
     object-position: center;
     display: block;
     margin: 0 auto;
