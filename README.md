@@ -53,4 +53,4 @@ interactivity, and multi-page site organization.
 
 Built by Cesar Maldonado and team as part of a web development course project.
 
-© 2025 PawFect Match | Made with ❤️ for animals everywhere
+© 2026 PawFect Match | Made with ❤️ for animals everywhere
